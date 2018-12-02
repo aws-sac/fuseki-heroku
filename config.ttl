@@ -25,6 +25,7 @@
    fuseki:services (
      <#service1>
      <#service2>
+     <#service3>
    ) .
 
 ## ---------------------------------------------------------------
@@ -54,7 +55,7 @@
     fuseki:serviceReadGraphStore    "get" ;
     fuseki:dataset                   <#books> ;
     .
-    
+
 <#books>    rdf:type ja:RDFDataset ;
     rdfs:label "Books" ;
     ja:defaultGraph 
@@ -71,4 +72,11 @@
         a ja:MemoryModel ;
         ja:content [ja:externalContent <file:Data/meds.rdf> ] ;
       ] ;
+    .
+
+<#service3> rdf:type fuseki:Service ;
+    fuseki:name                     "meds" ;
+    fuseki:serviceQuery             "query" ;
+    fuseki:serviceReadGraphStore    "get" ;
+    fuseki:dataset                   <#meds> ;
     .
