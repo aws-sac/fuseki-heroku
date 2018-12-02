@@ -63,3 +63,12 @@
         ja:content [ja:externalContent <file:Data/books.ttl> ] ;
       ] ;
     .
+
+<#meds>    rdf:type ja:RDFDataset ;
+    rdfs:label "Meds" ;
+    ja:defaultGraph 
+      [ rdfs:label "meds.rdf" ;
+        a ja:MemoryModel ;
+        ja:content [ja:externalContent <file:Data/meds.rdf> ] ;
+      ] ;
+    .
